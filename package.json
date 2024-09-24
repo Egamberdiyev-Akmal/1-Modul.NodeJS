@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "Nodejs one code"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Akmal",
+  "license": "ISC"
+}
