@@ -10,5 +10,8 @@
     "nodejs"
   ],
   "author": "Akmal",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
 }
