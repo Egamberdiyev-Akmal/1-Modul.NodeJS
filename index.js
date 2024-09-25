@@ -3,7 +3,7 @@ const server = http.createServer((request, respose) => {
     // request - serverga surov yuborish
     // response - jovobini olish
     console.log(request.url)
-    respose.write("Salom nima gaplar")
+    respose.write("Salom nima gaplar 22")
     respose.end()
 })
 
