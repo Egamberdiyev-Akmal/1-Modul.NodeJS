@@ -1,17 +1,23 @@
 const http = require('http')
 const server = http.createServer((request, response) => {
     if (request.method === "GET") {
-
         response.writeHead(200, { 'Content-type': 'text/html' })
         response.end(`
-            <h1>Send email</h1>
+            <h1>Send email name</h1>
             <form method="post" action="/">
-            <input name="email" type="email">
+            <input name="name" type="name" placeholder="Enter your email">
             <button type="submit">Send email</button>
             </form>
             `)
     } else if (request.method === "POST") {
-        response.end("Email successfully added")
+        const body = []
+        request.on('data', data => {
+            body.push(Buffer.from(data))
+        })
+        request.on('end', () => {
+            const messages = body.toString().split('=')[1]
+            response.end(`Email successfully added: ${messages}`)
+        })
     }
 })
 
