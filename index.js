@@ -1,10 +1,14 @@
 const http = require('http')
-const server = http.createServer((request, respose) => {
-    // request - serverga surov yuborish
-    // response - jovobini olish
-    console.log(request.url)
-    respose.write("Salom nima gaplar 225")
-    respose.end()
+const server = http.createServer((request, response) => {
+    if (request.method === "GET")
+        response.writeHead(200, { 'Content-type': 'text/html' })
+    response.end(`
+    <h1>Send email</h1>
+    <form method="post" action="/">
+     <input name="email" type="email">
+     <button type="submit">Send email</button>
+    </form>
+    `)
 })
 
 server.listen(3000, () => {
