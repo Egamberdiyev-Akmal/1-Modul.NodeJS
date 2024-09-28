@@ -9,4 +9,4 @@ loger.on('calculate', data => {
     console.log(data)
 })
 
-loger.log(10, 20)
+loger.log(10, 20) 
